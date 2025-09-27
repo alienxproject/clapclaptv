@@ -1,5 +1,5 @@
-export async function getServerSideProps() {
-  const API_KEY = process.env.LULUSTREAM_KEY;
+export async function getStaticProps() {
+  const API_KEY = process.env.LULUSTREAM_KEY || "MASUKKAN_API_KEY_LANGSUNG";
   const apiUrl = `https://lulustream.com/api/file/list?key=${API_KEY}`;
   let videos = [];
   try {
